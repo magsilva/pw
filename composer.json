@@ -15,7 +15,7 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url": "https://github.com/magsilva/pw"
+			"url": "https://github.com/facebook/php-sdk"
 		}
 	],
 	"require": {
