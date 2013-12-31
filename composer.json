@@ -12,15 +12,9 @@
 			"role": "Developer"
 		}
 	],
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/facebook/php-sdk"
-		}
-	],
 	"require": {
 		"monolog/monolog": "1.7.*",
-		"facebook/facebook-php-sdk": "3.2.*"
+		"facebook/php-sdk": "*"
 	},
 	"require-dev": {
 	}

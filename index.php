@@ -2,8 +2,6 @@
 
 require 'vendor/autoload.php';
 
-require 'vendor/facebook/php-sdk/src/facebook.php';
-
 date_default_timezone_set('UTC');
 
 use Monolog\Logger;
@@ -18,21 +16,25 @@ $log->addWarning('Foo');
 $log->addError('Bar');
 
 
-$facebook = new Facebook(array(
-  'appId'  => '628634493869371',
-  'secret' => 'd2de4ae4eec14042d23daebe49d2b7bc',
-));
+$facebookConfig = array(
+	'appId'  => '628634493869371',
+	'secret' => 'd2de4ae4eec14042d23daebe49d2b7bc',
+	'fileupload' => false,
+	'allowSignedRequest' => false,
+);
+$facebook = new Facebook($facebookConfig);
 
 // Get User ID
 $user = $facebook->getUser();
 if ($user) {
-  try {
-    // Proceed knowing you have a logged in user who's authenticated.
-    $user_profile = $facebook->api('/me');
-  } catch (FacebookApiException $e) {
-    error_log($e);
-    $user = null;
-  }
+	try {
+		// Proceed knowing you have a logged in user who's authenticated.
+		$user_profile = $facebook->api('/me');
+		var_dump($user_profile);
+	} catch (FacebookApiException $e) {
+		error_log($e);
+		$user = null;
+	}
 }
 
 ?>
