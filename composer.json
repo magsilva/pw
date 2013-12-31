@@ -1,0 +1,27 @@
+{
+	"name": "magsilva/pw",
+	"description": "Project Wedding",
+	"version": "1.0.0-dev",
+	"type": "project",
+	"license": "Apache-2.0",
+	"authors": [
+		{
+			"name": "Marco Aurélio Graciotto Silva",
+			"email": "magsilva@gmail.com",
+			"homepage": "http://ironiacorp.com",
+			"role": "Developer"
+		}
+	],
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/magsilva/pw"
+		}
+	],
+	"require": {
+		"monolog/monolog": "1.7.*",
+		"facebook/facebook-php-sdk": "3.2.*"
+	},
+	"require-dev": {
+	}
+}
